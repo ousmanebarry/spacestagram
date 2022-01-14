@@ -2,6 +2,8 @@ import { useEffect, useState, createContext } from 'react';
 import styles from '../styles/Home.module.css';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
+import Nav from '../components/Nav';
+import Error from '../components/Error';
 
 export default function Home() {
 	const count = 21;
@@ -21,7 +23,6 @@ export default function Home() {
 				const response = await fetch(`${server}/api/fetch?count=${count}`);
 				const data = await response.json();
 				setRes(data);
-				console.log(data);
 			} catch (error) {
 				setErr(error);
 				return error;
@@ -33,10 +34,11 @@ export default function Home() {
 
 	if (!res) return <Loading />;
 
-	if (err) return <h1>There was an error. Please reload.</h1>;
+	if (err) return <Error />;
 
 	return (
 		<div className={styles.main}>
+			<Nav />
 			{res.map((obj) => {
 				return (
 					<Card

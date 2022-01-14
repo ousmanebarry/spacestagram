@@ -44,3 +44,23 @@
 	cursor: pointer;
 	padding-left: 0.25rem;
 }
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	max-width: 600px;
+	width: 90%;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding: 0 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav div {
+	display: flex;
+	align-items: center;
+}
