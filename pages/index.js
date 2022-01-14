@@ -1,24 +1,20 @@
-import Image from 'next/image';
+import useSWR from 'swr';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-	const dev = process.env.NODE_ENV !== 'production';
-	const server = dev
-		? 'http://localhost:3000'
-		: 'https://shopify-fe-challenge.ousmanebarry.ca';
+	const [count, setCount] = useState(10);
+	const fetcher = (...args) => fetch(...args).then((res) => res.json());
+	const { data, error } = useSWR(`/api/fetch?count=${count}`, fetcher);
 
-	fetch(`${server}/api/fetch?count=5`, {
-		headers: {
-			Accept: 'application/json',
-		},
-	})
-		.then((res) => res)
-		.then((data) => {
-			console.log(data.json());
-		})
-		.catch((err) => {
-			console.log(err);
-		});
+	if (error) return <h1>Failed to load</h1>;
+	if (!data) return <h1>Loading...</h1>;
 
-	return <h1>Spacestagram</h1>;
+	return (
+		<h1>
+			{data.data.map((el) => {
+				return <p key={el.date}>{el.title}</p>;
+			})}
+		</h1>
+	);
 }

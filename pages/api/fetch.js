@@ -10,6 +10,6 @@ export default async function handler(req, res) {
 		const response = await data.json();
 		res.status(200).json({ data: response });
 	} catch (error) {
-		res.status(200).json({ data: error });
+		res.status(400).json({ data: error });
 	}
 }
