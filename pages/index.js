@@ -31,16 +31,20 @@ export default function Home() {
 
 	if (err) return <h1>There was an error. Please reload.</h1>;
 
-	return res.map((obj) => {
-		return (
-			<Card
-				key={obj.id}
-				link={obj.picture}
-				copyright={obj.copyright}
-				title={obj.title}
-				time={obj.time}
-				desc={obj.explanation}
-			/>
-		);
-	});
+	return (
+		<div className={styles.main}>
+			{res.map((obj) => {
+				return (
+					<Card
+						key={obj.id}
+						link={obj.picture}
+						copyright={obj.copyright}
+						title={obj.title}
+						time={obj.time}
+						desc={obj.explanation}
+					/>
+				);
+			})}
+		</div>
+	);
 }

@@ -1,5 +1,11 @@
+.main {
+	height: 100vh;
+	margin: 0 auto;
+}
+
 .container {
 	display: inline-block;
+	vertical-align: top;
 	background-color: white;
 	height: fit-content;
 	margin: 20px 20px;
@@ -24,6 +30,7 @@
 }
 
 .button {
+	display: inline-block;
 	background: transparent;
 	border-color: transparent;
 	text-transform: capitalize;

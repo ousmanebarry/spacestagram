@@ -3,7 +3,7 @@ export default async function handler(req, res) {
 		query: { count },
 	} = req;
 
-	const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&count=${count}`;
+	const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&count=${count}&thumbs=True`;
 
 	try {
 		const data = await fetch(url);
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 					id: index,
 					date: element.date,
 					explanation: element.explanation,
-					picture: element.url || element.hdurl,
+					picture: element.thumbnail_url || element.url || element.hdurl,
 					title: element.title,
 					copyright: element.copyright,
 				};
