@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-Image-element */
 import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 import Image from 'next/image';
