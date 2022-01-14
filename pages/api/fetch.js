@@ -8,8 +8,20 @@ export default async function handler(req, res) {
 	try {
 		const data = await fetch(url);
 		const response = await data.json();
-		res.status(200).json({ data: response });
+
+		res.status(200).json(
+			response.map((element, index) => {
+				return {
+					id: index,
+					date: element.date,
+					explanation: element.explanation,
+					picture: element.url || element.hdurl,
+					title: element.title,
+					copyright: element.copyright,
+				};
+			})
+		);
 	} catch (error) {
-		res.status(400).json({ data: error });
+		res.status(400).json(error);
 	}
 }

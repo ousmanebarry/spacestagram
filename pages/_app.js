@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
 				/>
 				<meta name='author' content='Ousmane Barry' />
 			</Head>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</React.Fragment>
 	);
 }
