@@ -5,6 +5,7 @@ module.exports = {
 			'i.vimeocdn.com',
 			'img.youtube.com',
 			'www.ustream.tv',
+			'mars.nasa.gov',
 		],
 	},
 };
