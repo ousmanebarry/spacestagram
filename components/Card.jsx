@@ -10,6 +10,9 @@ export default function Card({ link, copyright, title, time, desc }) {
 			<article className={styles.container}>
 				<div className={styles.picture_container}>
 					<Image
+						priority
+						blurDataURL={link}
+						placeholder='blur'
 						src={link}
 						width='650px'
 						height='500px'

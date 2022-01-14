@@ -6,6 +6,8 @@ module.exports = {
 			'img.youtube.com',
 			'www.ustream.tv',
 			'mars.nasa.gov',
+			'www.dermalina.com',
+			'nusoft.fnal.gov',
 		],
 	},
 };
