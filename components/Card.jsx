@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Icon } from '@iconify/react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Image from 'next/image';
 
 export default function Card({ link, copyright, title, time, desc }) {
 	const [readMore, setReadMore] = useState(false);
@@ -20,19 +21,22 @@ export default function Card({ link, copyright, title, time, desc }) {
 		<>
 			<article className={styles.container}>
 				<div className={styles.picture_container}>
-					<img
+					<Image
+						priority
+						blurDataURL={link}
+						placeholder='blur'
 						src={link}
 						width='650px'
 						height='500px'
 						className={styles.picture}
-						alt={copyright}
+						alt={`Picture of ${copyright}`}
 					/>
 				</div>
 				<div className={styles.text_container}>
 					<h1>{title}</h1>
 					<time>{time}</time>
 					<p>
-						{readMore ? desc : `${desc.substring(0, 350)}...`}
+						{desc ? (readMore ? desc : `${desc.substring(0, 350)}...`) : null}
 						<button
 							className={styles.button}
 							onClick={() => setReadMore(!readMore)}
@@ -50,7 +54,7 @@ export default function Card({ link, copyright, title, time, desc }) {
 						onClick={likeState}
 						ref={likeButton}
 					/>
-					<CopyToClipboard text={link}>
+					<CopyToClipboard text={`localhost:3000/post/${time}`}>
 						<Icon
 							icon='fluent:share-ios-48-filled'
 							width='35px'

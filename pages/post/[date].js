@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
-import styles from '../styles/Home.module.css';
-import Card from '../components/Card';
-import Loading from '../components/Loading';
-import Nav from '../components/Nav';
-import Error from '../components/Error';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import styles from '../../styles/Home.module.css';
+import Card from '../../components/Card';
+import Loading from '../../components/Loading';
+import Nav from '../../components/Nav';
+import Error from '../../components/Error';
 
-export default function Home() {
-	const count = 25;
+export default function Post() {
+	const router = useRouter();
+	const { date } = router.query;
 	const [res, setRes] = useState(null);
 	const [err, setErr] = useState(null);
 	const noImageLink =
@@ -15,9 +17,10 @@ export default function Home() {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await fetch(`/api/fetch?count=${count}`);
+				const response = await fetch(`/api/posts?date=${date}`);
 				const data = await response.json();
 				setRes(data);
+				console.log(data);
 			} catch (error) {
 				setErr(error);
 				return error;
@@ -25,7 +28,7 @@ export default function Home() {
 		};
 
 		fetchData();
-	}, [count]);
+	}, [date]);
 
 	if (!res) return <Loading />;
 
