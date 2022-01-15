@@ -12,7 +12,6 @@ body {
 	background-color: #f6f6f7;
 }
 
-.loading-main,
 .error-main {
 	display: flex;
 	justify-content: center;

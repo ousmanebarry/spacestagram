@@ -1,4 +1,4 @@
-import { useEffect, useState, createContext } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
@@ -6,7 +6,7 @@ import Nav from '../components/Nav';
 import Error from '../components/Error';
 
 export default function Home() {
-	const count = 10;
+	const count = 25;
 	const [res, setRes] = useState(null);
 	const [err, setErr] = useState(null);
 	const noImageLink =

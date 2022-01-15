@@ -1,6 +1,8 @@
 import '../styles/globals.css';
+import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import React from 'react';
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
 	return (

@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from '../styles/Home.module.css';
 import { useState, useRef } from 'react';
-import Image from 'next/image';
 import toast, { Toaster } from 'react-hot-toast';
 import { Icon } from '@iconify/react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -20,10 +20,7 @@ export default function Card({ link, copyright, title, time, desc }) {
 		<>
 			<article className={styles.container}>
 				<div className={styles.picture_container}>
-					<Image
-						priority
-						blurDataURL={link}
-						placeholder='blur'
+					<img
 						src={link}
 						width='650px'
 						height='500px'
