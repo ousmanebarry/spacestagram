@@ -12,12 +12,23 @@ body {
 	background-color: #f6f6f7;
 }
 
-.loading-main {
+.loading-main,
+.error-main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
+}
+
+.error-main h1 {
+	margin-bottom: 20px;
+}
+
+.error-main {
+	flex-direction: column;
+	font: inherit;
+	color: red;
 }
 
 /* The code below for the loading animation was not written by me */

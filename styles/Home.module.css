@@ -46,11 +46,22 @@
 	padding-left: 0.25rem;
 }
 
-.like_btn {
+.like_btn,
+.share_btn {
 	color: #49a6e9;
 }
 
-.like_btn:hover {
+.share_btn {
+	margin-left: 20px;
+}
+
+.btn_like path {
+	color: #49a6e9;
+	fill: #49a6e9;
+}
+
+.like_btn:hover,
+.share_btn:hover {
 	cursor: pointer;
 	color: #49a6e9af;
 }
