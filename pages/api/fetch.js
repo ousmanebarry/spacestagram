@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 					picture:
 						element.media_type === 'video'
 							? element.thumbnail_url
-							: element.hdurl || element.url,
+							: element.url || element.hdurl,
 					title: element.title,
 					copyright: element.copyright,
 				};

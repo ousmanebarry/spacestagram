@@ -6,7 +6,7 @@ import Nav from '../components/Nav';
 import Error from '../components/Error';
 
 export default function Home() {
-	const count = 21;
+	const count = 10;
 	const [res, setRes] = useState(null);
 	const [err, setErr] = useState(null);
 	const noImageLink =

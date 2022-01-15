@@ -25,7 +25,8 @@
 	border-top-right-radius: 8px;
 }
 
-.text_container {
+.text_container,
+.buttons_container {
 	margin: 20px 20px;
 }
 
@@ -43,6 +44,15 @@
 	font-size: 1rem;
 	cursor: pointer;
 	padding-left: 0.25rem;
+}
+
+.like_btn {
+	color: #49a6e9;
+}
+
+.like_btn:hover {
+	cursor: pointer;
+	color: #49a6e9af;
 }
 
 .nav {
