@@ -22,7 +22,6 @@ export default function Card({ link, copyright, title, time, desc }) {
 				<div className={styles.picture_container}>
 					<Image
 						priority
-						quality='100'
 						blurDataURL={link}
 						placeholder='blur'
 						src={link}
