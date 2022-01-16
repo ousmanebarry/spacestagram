@@ -33,7 +33,7 @@ export default function Home() {
 
 	return (
 		<div className={styles.main}>
-			<Nav />
+			<Nav go_home={false} />
 			{res.map((obj) => {
 				return (
 					<Card

@@ -52,6 +52,7 @@
 .like_btn,
 .share_btn {
 	color: #49a6e9;
+	transition: transform 0.2s ease;
 }
 
 .share_btn {
@@ -66,7 +67,7 @@
 .like_btn:hover,
 .share_btn:hover {
 	cursor: pointer;
-	color: #49a6e9af;
+	transform: scale(1.15);
 }
 
 .nav {
