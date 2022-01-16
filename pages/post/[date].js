@@ -20,7 +20,6 @@ export default function Post() {
 				const response = await fetch(`/api/posts?date=${date}`);
 				const data = await response.json();
 				setRes(data);
-				console.log(data);
 			} catch (error) {
 				setErr(error);
 				return error;
@@ -36,7 +35,7 @@ export default function Post() {
 
 	return (
 		<div className={styles.main}>
-			<Nav />
+			<Nav go_home={true} />
 			{res.map((obj) => {
 				return (
 					<Card
