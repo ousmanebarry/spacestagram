@@ -88,16 +88,22 @@
 .nav a {
 	font-family: inherit;
 	font-size: large;
+	font-weight: bold;
 	width: fit-content;
 	background-color: #49a6e9;
 	color: white;
 	padding: 5px 10px;
 	text-decoration: none;
 	border-radius: 8px;
+	border: solid 2px #49a6e9;
+	transition: all 0.25s ease;
 }
 
 .nav a:hover {
-	color: white;
+	font-weight: bold;
+	border: solid 2px #49a6e9;
+	color: black;
+	background-color: white;
 }
 
 .nav div {
