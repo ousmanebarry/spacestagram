@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from '../styles/Home.module.css';
 import { useState, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
@@ -22,6 +21,8 @@ export default function Card({ link, copyright, title, time, desc }) {
 			<article className={styles.container}>
 				<div className={styles.picture_container}>
 					<Image
+						priority
+						quality='100'
 						blurDataURL={link}
 						placeholder='blur'
 						src={link}

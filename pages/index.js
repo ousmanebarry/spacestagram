@@ -32,20 +32,23 @@ export default function Home() {
 	if (err) return <Error />;
 
 	return (
-		<div className={styles.main}>
-			<Nav go_home={false} />
-			{res.map((obj) => {
-				return (
-					<Card
-						key={obj.id}
-						link={obj.picture || noImageLink}
-						copyright={obj.copyright}
-						title={obj.title}
-						time={obj.date}
-						desc={obj.explanation}
-					/>
-				);
-			})}
-		</div>
+		<>
+			<div className={styles.main}>
+				<Nav go_home={false} />
+
+				{res.map((obj) => {
+					return (
+						<Card
+							key={obj.id}
+							link={obj.picture || noImageLink}
+							copyright={obj.copyright}
+							title={obj.title}
+							time={obj.date}
+							desc={obj.explanation}
+						/>
+					);
+				})}
+			</div>
+		</>
 	);
 }
