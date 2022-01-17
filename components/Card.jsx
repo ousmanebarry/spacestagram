@@ -53,7 +53,7 @@ export default function Card({ link, copyright, title, time, desc }) {
 						onClick={likeState}
 						ref={likeButton}
 					/>
-					<CopyToClipboard text={`${window.location.href}post/${time}`}>
+					<CopyToClipboard text={`${window.location.origin}/post/${time}`}>
 						<Icon
 							icon='fluent:share-ios-48-filled'
 							width='35px'
