@@ -53,7 +53,9 @@ export default function Card({ link, copyright, title, time, desc }) {
 						onClick={likeState}
 						ref={likeButton}
 					/>
-					<a href={`api/download?url=${link}?time=${time}`}>
+					<a
+						href={`${window.location.origin}/api/download?url=${link}?time=${time}`}
+					>
 						<Icon
 							icon='uil:image-download'
 							width='35px'
