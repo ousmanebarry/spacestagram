@@ -9,13 +9,11 @@ export default function Home() {
 	const count = 25;
 	const [res, setRes] = useState(null);
 	const [err, setErr] = useState(null);
-	const noImageLink =
-		'http://www.dermalina.com/wp-content/uploads/2020/12/no-image.jpg';
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await fetch(`/api/fetch?count=${count}`);
+				const response = await fetch(`/api/posts?count=${count}`);
 				const data = await response.json();
 				setRes(data);
 			} catch (error) {
@@ -40,7 +38,7 @@ export default function Home() {
 					return (
 						<Card
 							key={obj.id}
-							link={obj.picture || noImageLink}
+							link={obj.picture || '/images/no-image.jpg'}
 							copyright={obj.copyright}
 							title={obj.title}
 							time={obj.date}
