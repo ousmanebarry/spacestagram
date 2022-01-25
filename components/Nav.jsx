@@ -1,7 +1,6 @@
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import 'react-datepicker/dist/react-datepicker.css';
 
 export default function Nav({ go_home }) {
 	return (

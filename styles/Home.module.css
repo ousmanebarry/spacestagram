@@ -50,12 +50,14 @@
 }
 
 .like_btn,
-.share_btn {
+.share_btn,
+.download_btn {
 	color: #49a6e9;
 	transition: transform 0.2s ease;
 }
 
-.share_btn {
+.share_btn,
+.download_btn {
 	margin-left: 20px;
 }
 
@@ -65,7 +67,8 @@
 }
 
 .like_btn:hover,
-.share_btn:hover {
+.share_btn:hover,
+.download_btn:hover {
 	cursor: pointer;
 	transform: scale(1.15);
 }

@@ -53,6 +53,15 @@ export default function Card({ link, copyright, title, time, desc }) {
 						onClick={likeState}
 						ref={likeButton}
 					/>
+					<a href={`api/download?url=${link}?time=${time}`}>
+						<Icon
+							icon='uil:image-download'
+							width='35px'
+							height='35px'
+							className={styles.download_btn}
+						/>
+					</a>
+
 					<CopyToClipboard text={`${window.location.origin}/post/${time}`}>
 						<Icon
 							icon='fluent:share-ios-48-filled'
@@ -62,6 +71,7 @@ export default function Card({ link, copyright, title, time, desc }) {
 							onClick={shareLink}
 						/>
 					</CopyToClipboard>
+
 					<Toaster />
 				</div>
 			</article>
