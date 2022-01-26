@@ -11,6 +11,7 @@ export default function Home() {
 	const [err, setErr] = useState(null);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		const fetchData = async () => {
 			try {
 				const response = await fetch(`/api/posts?count=${count}`);
