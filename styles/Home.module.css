@@ -1,140 +1,140 @@
 .main {
-	min-height: 100vh;
-	padding: 2rem 0;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-	display: inline-block;
-	vertical-align: top;
-	background-color: white;
-	height: fit-content;
-	margin: 20px 20px;
-	border-radius: 8px;
-	max-width: 600px;
-	width: 90%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  height: fit-content;
+  margin: 20px 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .picture {
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	max-width: 600px;
-	width: 100%;
-	object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .text_container,
 .buttons_container {
-	margin: 20px 20px;
+  margin: 20px 20px;
 }
 
 .text_container h1,
 .text_container p {
-	margin: 10px 0;
+  margin: 10px 0;
 }
 
 .button {
-	display: inline-block;
-	background: transparent;
-	border-color: transparent;
-	text-transform: capitalize;
-	color: #49a6e9;
-	font-size: 1rem;
-	cursor: pointer;
-	padding-left: 0.25rem;
+  display: inline-block;
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  color: #49a6e9;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
 }
 
 .like_btn,
 .share_btn,
 .download_btn {
-	color: #49a6e9;
-	transition: transform 0.2s ease;
+  color: #49a6e9;
+  transition: transform 0.2s ease;
 }
 
 .share_btn,
 .download_btn {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 .btn_like path {
-	color: #49a6e9;
-	fill: #49a6e9;
+  color: #49a6e9;
+  fill: #49a6e9;
 }
 
 .like_btn:hover,
 .share_btn:hover,
 .download_btn:hover {
-	cursor: pointer;
-	transform: scale(1.15);
+  cursor: pointer;
+  transform: scale(1.15);
 }
 
 .nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: white;
-	max-width: 600px;
-	top: 0;
-	width: 90%;
-	border-radius: 8px;
-	margin-bottom: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
-	padding: 10px 20px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  max-width: 600px;
+  top: 0;
+  width: 90%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav a {
-	display: flex;
-	align-items: center;
-	font-family: inherit;
-	font-size: large;
-	font-weight: bold;
-	background-color: #49a6e9;
-	color: white;
-	padding: 5px 10px;
-	text-decoration: none;
-	border-radius: 8px;
-	border: solid 2px #49a6e9;
-	transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: large;
+  font-weight: bold;
+  background-color: #49a6e9;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: solid 2px #49a6e9;
+  transition: all 0.25s ease;
 }
 
 .nav a:hover {
-	font-weight: bold;
-	border: solid 2px #49a6e9;
-	color: black;
-	background-color: white;
+  font-weight: bold;
+  border: solid 2px #49a6e9;
+  color: black;
+  background-color: white;
 }
 
 .nav div {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav div h2 {
-	font-size: 22px;
-	margin-left: 5px;
+  font-size: 22px;
+  margin-left: 5px;
 }
 
 .error_main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .error_main h1 {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .error_main {
-	flex-direction: column;
-	font: inherit;
-	color: red;
+  flex-direction: column;
+  font: inherit;
+  color: red;
 }
